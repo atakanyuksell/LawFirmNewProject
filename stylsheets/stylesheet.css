@@ -1,0 +1,669 @@
+/* Genel Ayarlar */
+:root {
+  --font-size-base: clamp(15px, 1.5vw, 100px); /* Temel font boyutu */
+  --font-size-heading: clamp(9px, 3vw, 150px); /* Başlıklar için */
+  --font-size-subheading: clamp(15px, 2.5vw, 150px); /* Alt başlıklar için */
+  --content-padding: clamp(2px, 5vw, 150px); /* İçerik paddingi */
+  --border-radius: 10px;
+}
+/* Genel stil */
+body {
+  font-size: var(--font-size-base); /* Genel font boyutu */
+  line-height: 1.5;
+  font-family: 'Libre Caslon Display', serif;
+}
+
+/* Başlıklar için font boyutları */
+h1, h2, h3, h4, h5, h6 {
+  font-size: var(--font-size-heading); /* Dinamik başlık boyutu */
+}
+
+/* Alt başlıklar için font boyutu */
+h2 {
+  font-size: var(--font-size-subheading); /* Dinamik alt başlık boyutu */
+}
+
+/* Paragraflar için font boyutu */
+p {
+  font-size: var(--font-size-base); /* Paragraflar için temel font boyutu */
+}
+
+/* Diğer öğeler (örneğin butonlar) için font boyutu */
+button {
+  font-size: var(--font-size-base);
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Yumuşak kaydırma */
+  
+  }
+  
+  body {
+    font-family: "Libre Caslon Display", serif;
+    width: 100%;
+    overflow-x: hidden; /* Yatay kaydırmayı önler */
+  }
+ 
+  /* Navbar */
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    animation: slideDown 1s ease-out forwards; /* Animasyon ekledik */
+    z-index: 1000;
+    list-style: none;
+    
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 100%;
+  }
+  .nav-item {
+    margin-top: 50px;
+    margin-right: 100px;
+    
+  }
+  
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s; /* Hover efekti için geçiş */
+  }
+  .navbar.active {
+    display: flex; /* Aktif olunca görünür yap */
+  }
+  
+  /* Hamburger Menü (Başlangıçta Gizli) */
+  .menu-icon {
+    visibility: hidden;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+
+    /* Hero alanı (Üstteki büyük resim) */
+    .hero-wrapper {
+      position: absolute; /* Sayfanın geri kalanından bağımsız hale getir */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 450px;
+      z-index: -1; /* Arkada kalmasını sağla */
+    }
+    
+    
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      background: url("img/background-homepage.png") center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: first baseline;
+      padding: 0 0 3vh 3vh;
+     
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: 48px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    /* Anasayfa Bölümü */
+    #anasayfa {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/background-homepage.png");
+      background-size: cover;
+      background-position: center;  
+      background-attachment: fixed; 
+      background-attachment: local;
+      height: 100vh; /* Tam ekran kaplar */
+    }
+
+    .content-hp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100vh;
+      padding: 50px;
+      margin: 100px;
+      color: white;
+      text-align: center;
+    }
+
+    .content-hp h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out forwards; /* Yavaşça görünür */
+    }
+
+    .content-hp hr {
+      height: 2px;
+      background-color: white;
+      animation: expandLine 1.5s ease-out forwards; /* Soldan sağa genişler */
+      animation-delay: 0.5s; /* Başlık animasyonundan sonra başlar */
+    }
+
+    .title {
+      color: white;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    /* Ana içerik bölümü */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-section {
+      flex: 1 1 400px;
+      min-width: 300px;
+    }
+
+    .text-section p {
+      margin-bottom: 10px;
+    }
+
+    .image-section {
+      flex: 1 1 400px;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+
+  /* Alt kısım (isteğe bağlı) */
+    footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+  /* Ekibimiz Bölümü */
+.team-section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+
+.team-member {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.team-member h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.team-member p {
+  font-size: 14px;
+}
+
+/* Hizmetlerimiz Sayfası */
+
+/* Hizmet Kartları Bölümü */
+.services-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  justify-content: flex-start;
+  /* Kart arka plan resmi */
+   background: url("img/judge.png") center/cover no-repeat;
+    background-color: #4d4e4a;
+    background-size: 50%; /* Resmi %120 boyutlandırdık (büyüklüğünü kontrol) */
+   
+    color: #fff;
+}
+
+/* Kart Tasarımı */
+.service-card {
+  background: #8c7255; /* Kahverengi ton */
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #ddd;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Hover Efekti */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* İletişim Sayfası */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 10vh 10vh 5vh 10vh;
+}
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.paper{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: space-between;
+  border-radius: 70px;
+  padding: 5vh;
+  background: rgba(0, 0, 0, 0.4); 
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.contact-info {
+  justify-content: space-between;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  color: #ffffff;
+}
+.map-container {
+  position: relative;
+  width: 50%;
+  height: 50v%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+   
+}
+.contact-form {
+  width: 30%;
+  z-index: 2;
+  margin: 0vh 0vh 0vh 10vh;
+  border-radius: 10px;
+  border-color: black;
+  border-width:  medium;
+  padding: 5vh 5vh 5vh 5vh;
+  background-color: #a49c9c1d;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+    /* Hareketli Tasarımlar */
+@keyframes slideDown {
+  from {
+    top: -100px; /* Yukarıdan başlar */
+  }
+  to {
+    top: 0; /* Yerine oturur */
+  }
+}
+
+.navbar a:hover {
+  background: #555;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Hafif aşağıdan başlar */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Yerine oturur */
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0; /* Başlangıçta görünmez */
+  }
+  to {
+    width: 60%; /* Çizgi genişliği */
+  }
+}
+
+
+@keyframes fadeSection {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Genel Responsive Ayarlar */
+
+/* Ekran genişliği 1565px altına düştüğünde */
+
+
+@media (max-width: 1100px) {
+  .nav-item {
+    margin-right: 10px;
+  }
+  .content-hp h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    /* padding: 30vh 10vh 5vh 10vh; */
+  }
+  .contact-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .paper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+    padding: 5vh;
+  }
+  .contact-info {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    color: #ffffff;
+  }
+  .map-container {
+    align-self: flex-end;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+  }
+  .contact-form {
+    width: 80%;
+    height: 80%;
+    margin: 10vh 0vh 0vh 0vh;
+    border-radius: 3px;
+    border-color: black;
+    border-width:  medium; 
+    background-color: #0000003e;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .nav-item {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .content-hp {
+    padding: 20px;
+    margin: 50px 0;
+  }
+  .team-section,
+  .services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Kartlar arasına boşluk bırakır */
+  }
+  .service-card {
+    width: calc(50% - 10px); /* 50% genişlikten biraz azaltarak taşmayı engelleriz */
+    margin-bottom: 20px; /* Alt alta gelen kartlar arasında boşluk bırakır */
+    box-sizing: border-box; /* Padding ve border eklenirse genişliği aşmaz */
+  }
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paper {
+    width: 90%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 5vh;
+  }
+  .map-container {
+    width: 90%;
+    height: 300px;
+  }
+  /* Navbar aktifken tüm ekranı kaplaması için */
+.navbar {
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Tüm ekranı kapla */
+  background: rgb(0, 0, 0); /* Siyah arka plan */
+  display: none; /* Varsayılan olarak gizli */
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.navbar.active {
+  display: flex; /* Açıldığında ekranı kapla */
+}
+
+.nav-item {
+  margin: 20px 0;
+}
+
+.nav-item a {
+  font-size: 24px; /* Daha büyük font */
+  color: white;
+  text-decoration: none;
+}
+
+/* Menü butonunun her zaman görünmesi için */
+.menu-icon {
+  visibility: visible;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+.logo {
+  width: 80px; /* Küçültüldü */
+  height: 80px; /* Küçültüldü */
+  margin-right: 0px;
+  border-radius: 100%;
+}
+
+@media (max-width: 480px) {
+  .overlay img {
+    width: 80%;
+  }
+  .paper {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .content-hp h1 {
+    font-size: 2rem;
+  }
+  .team-member p {
+    font-size: 11px;
+  }
+  .team-member h3 {
+    font-size: 13px;
+   width: 100%;
+  }
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between; /* Kartlar arasına boşluk bırakır */
+  }
+  .team-member img {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    padding: 20px;
+  }
+
+}

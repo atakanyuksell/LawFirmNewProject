@@ -32,6 +32,7 @@ button {
     flex: 1; /* Ana içeriğin tüm boş alanı kaplamasını sağlar */
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px; /* Footer ile içerik arasında boşluk bırakır */
   }
 * {
     box-sizing: border-box;

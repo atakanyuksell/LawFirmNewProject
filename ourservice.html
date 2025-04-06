@@ -1,83 +1,142 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+Hentaigana:wght@200..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+Hentaigana:wght@200..900&display=swap" rel="stylesheet">
   <title>Hakkımızda - Örnek Sayfa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="stylsheets/stylesheet.css" />
 </head>
+
 <body>
 
-  <!-- Üst Menü -->
-        <!-- Navbar -->
-        <header>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul class="navbar">
-              <img src="stylsheets/img/logo.png" alt="Logo" class="logo">
-              <li class="nav-item"><a href="/index.html">Anasayfa</a></li>
-              <li class="nav-item"><a href="/aboutus.html">Hakkımızda</a></li>
-              <li class="nav-item"><a href="/team.html">Ekibimiz</a></li>
-              <li class="nav-item"><a href="/ourservice.html">Hizmetlerimiz </a></li>
-              <li class="nav-item"><a href="/contact.html">İletişim</a></li>
-            </ul>
-          </header>
-<main>
-  <!-- Hero/Banner Bölümü -->
-  <section class="hero">
-    <div class="overlay">
-      <img src="stylsheets/img/HizmetlerimizW.png" alt="">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="stylsheets/img/logo.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="/index.html">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus.html">Hakkımızda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team.html">Ekibimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="mt-5 pt-1">
+    <div class="container-fluid px-0">
+      <img src="stylsheets/img/background-homepage.png" class="img-fluid w-100" alt="Banner" style="height: 50vh; object-fit: cover;">
     </div>
   </section>
+<main>
+  <!-- Content -->
+  <div class="row justify-content-center my-5">
+    <div class="col-12 col-lg-10">
+      <div class="row gx-4 gy-4">
+                      <!-- Hizmet Kartları -->
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="Sağlık Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">Sağlık Hukuku</h3>
+                  <p class="card-text">Sağlık sektörüne özel hukuki danışmanlık hizmetleri sunuyoruz.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="İş ve Sosyal Güvenlik Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">İş ve Sosyal Güvenlik Hukuku</h3>
+                  <p class="card-text">İşveren ve çalışan haklarını koruma altına alıyoruz.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="İdare Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">İdare Hukuku</h3>
+                  <p class="card-text">İdari işlemler ve kamu hukuku alanında hizmet vermekteyiz.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="Sağlık Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">Sağlık Hukuku</h3>
+                  <p class="card-text">Sağlık sektörüne özel hukuki danışmanlık hizmetleri sunuyoruz.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="İş ve Sosyal Güvenlik Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">İş ve Sosyal Güvenlik Hukuku</h3>
+                  <p class="card-text">İşveren ve çalışan haklarını koruma altına alıyoruz.</p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col">
+              <div class="card h-100">
+                <img src="stylsheets/img/placeholder.jpg" class="card-img-top" alt="İdare Hukuku">
+                <div class="card-body">
+                  <h3 class="card-title">İdare Hukuku</h3>
+                  <p class="card-text">İdari işlemler ve kamu hukuku alanında hizmet vermekteyiz.</p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
 
-     <!-- Hizmet Kartları -->
-     <section class="services-section">
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="Sağlık Hukuku">
-          <h3>Sağlık Hukuku</h3>
-          <p>Sağlık sektörüne özel hukuki danışmanlık hizmetleri sunuyoruz.</p>
       </div>
-
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="İş ve Sosyal Güvenlik Hukuku">
-          <h3>İş ve Sosyal Güvenlik Hukuku</h3>
-          <p>İşveren ve çalışan haklarını koruma altına alıyoruz.</p>
-      </div>
-
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="İdare Hukuku">
-          <h3>İdare Hukuku</h3>
-          <p>İdari işlemler ve kamu hukuku alanında hizmet vermekteyiz.</p>
-      </div>
-
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="Sağlık Hukuku">
-          <h3>Sağlık Hukuku</h3>
-          <p>Sağlık sektörüne özel hukuki danışmanlık hizmetleri sunuyoruz.</p>
-      </div>
-
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="İş ve Sosyal Güvenlik Hukuku">
-          <h3>İş ve Sosyal Güvenlik Hukuku</h3>
-          <p>İşveren ve çalışan haklarını koruma altına alıyoruz.</p>
-      </div>
-
-      <div class="service-card">
-          <img src="stylsheets/img/placeholder.jpg" alt="İdare Hukuku">
-          <h3>İdare Hukuku</h3>
-          <p>İdari işlemler ve kamu hukuku alanında hizmet vermekteyiz.</p>
-      </div>
-
-  </section>
+    </div>
+  </div>
 </main>
-    <!-- Footer -->
-    <footer>
-      © 2025 Tüm Hakları Saklıdır. <br/>
-        (Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)
-      </footer>
-         <!-- JavaScript -->
-         <script src="js/script.js"></script>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Tüm Hakları Saklıdır.</p>
+      <small>(Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,34 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+Hentaigana:wght@200..900&display=swap" rel="stylesheet">
-  <title>Hakkımızda - Örnek Sayfa</title>
-  <link rel="stylesheet" href="stylsheets/stylesheet.css" />
-</head>
-<body>
-  <div id="anasayfa">
-        <!-- Navbar -->
-        <header>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul class="navbar">
-              <img src="stylsheets/img/logo.png" alt="Logo" class="logo">
-              <li class="nav-item"><a href="/index.html">Anasayfa</a></li>
-              <li class="nav-item"><a href="/aboutus.html">Hakkımızda</a></li>
-              <li class="nav-item"><a href="/team.html">Ekibimiz</a></li>
-              <li class="nav-item"><a href="/ourservice.html">Hizmetlerimiz </a></li>
-              <li class="nav-item"><a href="/contact.html">İletişim</a></li>
-            </ul>
-          </header>
 
-          <div class="content-hp">
-            <h1>ABDULHAKİMOĞULLARI HUKUK BÜROSU</h1>
-            <hr>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anasayfa - Abdulhakimoğulları Hukuk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif+Hentaigana:wght@200..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stylsheets/stylesheet.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Libre Caslon Display', serif;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url("stylsheets/img/background-homepage.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-top: 10vh;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      display: inline-block;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out forwards; /* Yavaşça görünür */
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-title {
+        font-size: 1.5rem;
+      }
+    }
+
+
+     hr {
+      height: 2px;
+      opacity: 1;
+      background-color: rgb(236, 236, 236);
+      display: inline-block;
+      animation: expandLine 1.5s ease-out forwards; /* Soldan sağa genişler */
+      animation-delay: 0.5s; /* Başlık animasyonundan sonra başlar */
+      width: 70% !important;
+    }
+
+    @keyframes expandLine {
+  from {
+    width: 0; /* Başlangıçta görünmez */
+  }
+  to {
+    width: 70%; /* Genişlik final durumu */
+  }
+}
+
+    @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Hafif aşağıdan başlar */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Yerine oturur */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="stylsheets/img/logo.png" alt="Logo" height="40" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link active" href="/index.html">Anasayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="/aboutus.html">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="/team.html">Ekibimiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">İletişim</a></li>
+        </ul>
+      </div>
     </div>
-         <!-- JavaScript -->
-         <script src="js/script.js"></script>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-text">
+      <h1 class="fw-bold hero-title">ABDULHAKİMOĞULLARI HUKUK BÜROSU</h1>
+      <hr>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Tüm Hakları Saklıdır.</p>
+      <small>(Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+</html>

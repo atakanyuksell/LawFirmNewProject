@@ -3,14 +3,79 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Libre Caslon Display', serif; */
+ 
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   font-family: 'Libre Caslon Display', serif; 
 }
 
 body > main {
   flex: 1;
+}
+
+
+
+
+
+
+
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10vh!important;
+}
+
+.hero-title {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out forwards; /* Yavaşça görünür */
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+ hr {
+  height: 2px;
+  opacity: 1;
+  background-color: rgb(236, 236, 236);
+  display: inline-block;
+  animation: expandLine 1.5s ease-out forwards; /* Soldan sağa genişler */
+  animation-delay: 0.5s; /* Başlık animasyonundan sonra başlar */
+  width: 70% !important;
+}
+
+@keyframes expandLine {
+from {
+width: 0; /* Başlangıçta görünmez */
+}
+to {
+width: 70%; /* Genişlik final durumu */
+}
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px); /* Hafif aşağıdan başlar */
+}
+to {
+opacity: 1;
+transform: translateY(0); /* Yerine oturur */
+}
 }

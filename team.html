@@ -14,26 +14,25 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top px-3 py-3 shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="stylsheets/img/logo.png" alt="Logo" height="40">
+      <a class="navbar-brand me-1" href="/">
+        <img src="stylsheets/img/logo.png" alt="Logo" height="60">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
         aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-        <ul class="navbar-nav gap-3">
+        <ul class="navbar-nav gap-5 fs-4">
           <li class="nav-item">
-            <a class="nav-link active" href="/index.html">Anasayfa</a>
+            <a class="nav-link" href="/index.html">Anasayfa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/aboutus.html">Hakkımızda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/team.html">Ekibimiz</a>
+            <a class="nav-link active" href="/team.html">Ekibimiz</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/ourservice.html">Hizmetlerimiz</a>
@@ -45,11 +44,20 @@
       </div>
     </div>
   </nav>
+  
 
   <!-- HERO -->
-  <section class="">
+  <section class="hero position-relative">
     <div class="container-fluid px-0">
-      <img src="stylsheets/img/background-homepage.png" class="img-fluid w-100" alt="Banner" style="height: 50vh; object-fit: cover;">
+      <img src="stylsheets/img/background-homepage.png" class="img-fluid w-100" alt="Banner"
+        style="height: 50vh; object-fit: cover;">
+      <!-- Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+
+    <!-- Sol alt köşedeki yazı ve çizgi -->
+    <div class="position-absolute bottom-0 start-0 text-white p-4 bg-dark bg-opacity-75 rounded-top-end">
+      <h1 class="display-4 fw-bolder mb-2">Ekibimiz</h1>
+      <div class="border-top border-light" style="width: 100%; height: 2px;"></div>
     </div>
   </section>
 
@@ -100,7 +108,7 @@
   </div>
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-auto w-100">
-    <div class="container">
+    <div class="container mb-5">
       <p class="mb-0">&copy; 2025 Tüm Hakları Saklıdır.</p>
       <small>(Kahve molasına çıkan ekip üyeleri, birazdan geri gelecek!)</small>
     </div>
